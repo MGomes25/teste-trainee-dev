@@ -1,0 +1,16 @@
+<form class="new-task" (submit)="addTask($event)">
+  <div class="new-task_input-container">
+    <label class="new-task_label" for="new-task">Título da Tarefa</label>
+    <input
+      id="new-task"
+      class="new-task_input"
+      type="text"
+      [(ngModel)]="newTaskTitle"
+      name="title"
+      placeholder="Descreva aqui de forma breve a sua tarefa."
+    />
+  </div>
+  <button type="submit" class="new-task_button">
+    {{ editingTodoId ? 'Atualizar' : 'Salvar' }}
+  </button>
+</form>
